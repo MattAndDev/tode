@@ -1,0 +1,48 @@
+{
+  "name": "tode",
+  "version": "0.1.0",
+  "description": "opinionated typescript & node bare metal",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch 'source/**/*.ts' --exec 'ts-node' source/index.ts",
+    "start": "tsc && node ./build/index.js",
+    "test": "jest ./source/*"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@types/jest": "^24.0.25",
+    "@types/node": "^13.1.6",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-jest": "^23.4.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.0.6",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.5.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "standard": "^14.3.1",
+    "ts-jest": "^24.3.0",
+    "ts-node": "^8.6.1",
+    "typescript": "^3.7.4"
+  },
+  "author": {
+    "name": "Matteo Maroanati",
+    "email": "me@mattinthe.net",
+    "url": "https://mattinthe.net"
+  },
+  "license": "WTFPL",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "prettier --write",
+      "eslint ./source --ext .ts --fix"
+    ]
+  }
+}
