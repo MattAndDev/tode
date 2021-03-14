@@ -5,7 +5,8 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "./build/",
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "strict": true
   },
   "include": ["./source/**/*"],
   "exclude": ["./source/**/*.test"]
