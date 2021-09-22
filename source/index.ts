@@ -7,7 +7,6 @@ const server = createServer((_req, res) => {
   res.statusCode = 200
   res.setHeader('Content-Type', 'text/plain')
   res.end(foo())
-  return false
 })
 
 server.listen(PORT, '0.0.0.0', () =>
